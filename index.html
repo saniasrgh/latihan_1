@@ -3,8 +3,122 @@
 <head>
 	<title>Form Pendaftaran</title>
 	<meta name="author" content="Saniyatil Wada'i br Saragih">
+	<style>
+		body{
+			background-color: rgb(147, 213, 214);
+		}
+		h1{
+			color: rgb(0, 0, 0);
+			text-align: center;
+			font-family: Georgia;
+		}
+		h2{
+			font-style: italic;
+			text-align: center;
+		}
+		fieldset{
+			margin-bottom: 20px;
+			background-color: rgb(84, 143, 195);
+			border-color: black;
+			border-style: solid;
+			border-radius: 10px;
+		}
+		legend{
+			color: rgb(0, 0, 0);
+			text-align: center;
+			padding: 5px;
+			font-size: 23px;
+			border-style: solid;
+			border-color: rgb(62, 61, 61);
+			border-radius: 10px;
+			border-width: 3px;
+			background-color: rgb(246, 211, 249);;
+
+		}
+		select,textarea, input[type = "text"], [type = "date"],[type= "email"], [type="file"]{
+			border-radius: 20px;
+			background-color: rgb(246, 211, 249);
+			color: rgb(0, 0, 0);
+			padding: 10px;
+			width: 90%;
+			border-color: rgb(0, 0, 0);
+		}
+		.input:hover{
+			border-radius: 20px;
+			background-color: rgb(255, 255, 255);
+			color: black;
+			padding: 10px;
+			width: 90%;
+			border-color: rgb(255, 255, 255);
+		}
+		.sel:hover{
+			border-radius: 20px;
+			background-color: rgb(255, 255, 255);
+			color: black;
+			padding: 10px;
+			width: 90%;
+			border-color: rgb(255, 255, 255);
+		}
+		#txta:hover{
+			border-radius: 20px;
+			background-color: rgb(255, 255, 255);
+			color: black;
+			padding: 10px;
+			width: 90%;
+			border-color: rgb(255, 255, 255);
+		}
+		::placeholder{
+			color:rgb(0, 0, 0);
+		}
+		*{
+			color: rgb(0, 0, 0);
+		}
+		#botton{
+			border-radius: 25px;
+			background-color: rgb(246, 211, 249);
+			color: black;
+			padding: 15px;
+			font-weight: bold;
+		}
+		#botton:hover{
+			background-color: rgb(255, 255, 255);
+			color: black;
+			padding: 15px;
+			font-weight: bold;
+		}
+		header{
+			background-color: rgb(84, 143, 195);
+			text-align: center;
+			margin: 0px;
+			width: 100%;
+			height: 70px;
+		}
+		h1{
+			padding: 20px;
+		}
+		main{
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+		footer{
+			background-color: rgb(84, 143, 195);
+			text-align: center;
+			margin: 0px;
+			width: 100%;
+			height: 70px;
+			position: fixed;
+			bottom: 0px;
+		}
+		h3{
+			padding: 20px;
+		}
+		
+	</style>
 </head>
 <body>
+	<header><h1>-- My landing page --</h1></header>
+	<main>
 	<h1>Form Pendaftaran</h1>
 	<form action="" method="GET">
 		<table width="100%">
@@ -12,31 +126,31 @@
 				<td width="50%">
 					<fieldset>
 							<legend>Data Pribadi</legend>
-								<table cellpadding="5">
+								<table  width="100%">
 									<tr>
-										<td width="100"><label for="id_nama">Nama Lengkap</label></td>
+										<td width="30%"><label for="id_nama">Nama Lengkap</label></td>
 										<td>:</td> 
-										<td><input type="text" name="nama" id="id_nama" placeholder="Nama Lengkap" required autofocus></td>
+										<td><input type="text" name="nama" class="input" id="id_nama" placeholder="Nama Lengkap" required autofocus></td>
 									</tr>
 									<tr>
 										<td><label>Email </label></td>
 										<td>:</td>
-										<td><input type="email" name="email"></td>
+										<td><input type="email" name="email" class="input"></td>
 									</tr>
 									<tr>
 										<td><label>Nomor Telepon</label></td>
 										<td>:</td>
-										<td><input type="tel" name="telepon"></td>
+										<td><input type="text" name="telepon" class="input"></td>
 									</tr>
 									<tr>
 										<td><label>Alamat Lengkap</label></td>
 										<td valign="middle">:</td>
-										<td><textarea name="alamat" rows="7" cols="30"></textarea></td>
+										<td><textarea name="alamat" rows="9" cols="30" id="txta"></textarea></td>
 									</tr>
 									<tr>
 										<td><label>Tanggal Lahir </label></td>
 										<td>:</td>
-										<td><input type="date" name="tanggal-lahir"></td>
+										<td><input type="date" name="tanggal-lahir" class="input"></td>
 									</tr>
 									<tr>
 										<td><label>Jenis Kelamin </label></td>
@@ -48,7 +162,7 @@
 									<tr>
 										<td width="40"><label>Agama</label></td>
 										<td>:</td>
-										<td><select name="agama" required>
+										<td><select name="agama" class="sel" required>
 												<option value="">Piliih Agama</option>
 												<option value="islam">Islam</option>
 												<option value="kristen">Kristen</option>
@@ -69,12 +183,12 @@
 									<tr>
 										<td><label>Foto </label></td>
 										<td>:</td>
-										<td><input type="file" name="foto" accept="image/jpg"></td>
+										<td><input type="file" name="foto" accept="image/jpg" class="input"></td>
 									</tr>
 									<tr>
 										<td><label>CV </label></td>
 										<td>:</td>
-										<td><input type="file" name="cv" accept=".pdf"></td>
+										<td><input type="file" name="cv" accept=".pdf" class="input"></td>
 									</tr>
 								</table>
 					</fieldset>
@@ -84,52 +198,52 @@
 				<td width="50%" valign="top">
 					<fieldset>
 					<legend>Data Orang Tua</legend>
-						<table cellpadding="5">
+						<table  width="100%">
 							<tr>
-								<td><label>Nama Ayah</label></td>
+								<td width="30%"><label>Nama Ayah</label></td>
 								<td>:</td>
-								<td><input type="text" name="ayah" required></td>
+								<td><input type="text" name="ayah" class="input" required></td>
 							</tr>
 							<tr>
 								<td><label>Pekerjaan Ayah</label></td>
 								<td>:</td>
-								<td><input type="text" name="kerja_ayh"></td>
+								<td><input type="text" name="kerja_ayh" class="input"></td>
 							</tr>
 							<tr>
 								<td><label>Alamat Ayah</label></td>
 								<td valign="middle">:</td>
-								<td><textarea name="alamat_ayh" rows="6" cols="20"></textarea></td>
+								<td><textarea name="alamat_ayh" rows="6" cols="20" id="txta"></textarea></td>
 							</tr>
 							<tr>
 								<td><label>Nomor Telepon Ayah</label></td>
 								<td>:</td>
-								<td><input type="tel" name="tel_ayah"></td>
+								<td><input type="text" name="tel_ayah" class="input"></td>
 							</tr>
 							<tr>
 								<td><label>Nama Ibu</label></td>
 								<td>:</td>
-								<td><input type="text" name="ibu"></td>
+								<td><input type="text" name="ibu" class="input"></td>
 							</tr>
 							<tr>
 								<td><label>Pekerjaan Ibu</label></td>
 								<td>:</td>
-								<td><input type="text" name="kerja_ibu"></td>
+								<td><input type="text" name="kerja_ibu" class="input"></td>
 							</tr>
 							<tr>
 								<td><label>Alamat Ibu</label></td>
 								<td>:</td>
-								<td><textarea name="alamat_ibu" rows="6" cols="20"></textarea>
+								<td><textarea name="alamat_ibu" rows="6" cols="20" id="txta"></textarea>
 								</td>
 							</tr>
 							<tr>
 								<td><label>Nomor Telepon Ibu</label></td>
 								<td>:</td>
-								<td><input type="tel" name="tel_ibu"></td>
+								<td><input type="text" name="tel_ibu" class="input"></td>
 							</tr>
 							<tr colspan="2">
 								<td>
-									<input type="submit" value="Submit">
-									<input type="reset" value="Reset">
+									<input type="submit" id="botton" value="Submit">
+									<input type="reset" id="botton" value="Reset">
 								</td>
 							</tr>
 						</table>
@@ -138,6 +252,8 @@
 			</tr>
 		</table>	
 	</form>
+	</main>
+	<footer><h3>&copy; 2025 My Website. All Rights Reserved</h3></footer>
 </body>
 
 </html>
